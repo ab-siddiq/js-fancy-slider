@@ -56,11 +56,10 @@ const selectItem = (event, img) => {
 
   if (item === -1) {
     sliders.push(img);
-
     count = sliders.length;
   } else {
-    sliders.pop(img);
-    count = sliders.length - 1 + 1;
+    sliders.splice(item,1);
+    count = sliders.length;
   }
   document.getElementById('item-select').innerHTML = count;
 }
